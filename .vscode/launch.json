@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Spinal-Tap-Case.js"
+            "program": "${workspaceFolder}/Find-smallest-common-multiple-of-a-range.js"
         }
     ]
 }
