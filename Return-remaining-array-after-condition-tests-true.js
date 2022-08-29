@@ -3,7 +3,7 @@
 // Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
 
 function dropElements(arr, func) {
-	let filteredArr = arr.filter((item, index) => {
+	let filteredArr = arr.filter((item) => {
 		return func(item);
 	});
 	let finalArr = arr.slice(arr.indexOf(filteredArr[0]));
