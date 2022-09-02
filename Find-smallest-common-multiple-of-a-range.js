@@ -29,3 +29,45 @@ function smallestCommons(arr) {
 
 console.log(smallestCommons([1, 5]));
 console.log(smallestCommons([23, 18]));
+
+//USING THE RULE OF MULTIPLES AND CHECK FOR THE LEAST COMMON MULTIPLE
+
+function smallestCommons2(arr) {
+	let max = Math.max(...arr);
+	let min = Math.min(...arr);
+	let seq = [];
+	for (let i = min; i <= max; i++) {
+		seq.push(i);
+	}
+	let leastCommonMultiple = max;
+
+	const lcm = (num1, num2) => {
+		let arr1 = [];
+		for (let i = 1; i <= num2; i++) {
+			arr1.push(num1 * i);
+		}
+
+		let arr2 = [];
+		for (let i = 1; i <= num1; i++) {
+			arr2.push(num2 * i);
+		}
+
+		let commonMultiples = [];
+
+		arr1.forEach((item) => {
+			if (arr2.includes(item)) {
+				commonMultiples.push(item);
+			}
+		});
+
+		leastCommonMultiple = Math.min(...commonMultiples);
+	};
+
+	seq.forEach((item) => {
+		lcm(leastCommonMultiple, item);
+	});
+
+	return leastCommonMultiple;
+}
+
+smallestCommons([2, 10]);
