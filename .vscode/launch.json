@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Find-smallest-common-multiple-of-a-range.js"
+            "program": "${workspaceFolder}/Convert-Number-To-Roman-Numeral.js"
         }
     ]
 }
