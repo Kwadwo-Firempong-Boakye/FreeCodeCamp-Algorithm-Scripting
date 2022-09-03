@@ -40,7 +40,7 @@ function convertToRoman(num) {
 		let onesValue = value[1];
 
 		if (reference.hasOwnProperty(tensValue)) {
-			romanNum.push(reference(tensValue));
+			romanNum.push(reference[tensValue]);
 		} else if (+tensValue < 40) {
 			for (let i = 0; i < +tensValue; i += 10) {
 				romanNum.push("X");
@@ -60,7 +60,7 @@ function convertToRoman(num) {
 		let onesValue = value[2];
 
 		if (reference.hasOwnProperty(hundredsValue)) {
-			romanNum.push(reference(hundredsValue));
+			romanNum.push(reference[hundredsValue]);
 		} else if (+hundredsValue < 400) {
 			for (let i = 0; i < +hundredsValue; i += 100) {
 				romanNum.push("C");
@@ -82,7 +82,7 @@ function convertToRoman(num) {
 		let onesValue = value[3];
 
 		if (reference.hasOwnProperty(thousandsValue)) {
-			romanNum.push(reference(thousandsValue));
+			romanNum.push(reference[thousandsValue]);
 		} else {
 			for (let i = 0; i < +thousandsValue; i += 1000) {
 				romanNum.push("M");
@@ -109,4 +109,4 @@ function convertToRoman(num) {
 	return romanNum.join("");
 }
 
-console.log(convertToRoman(50));
+console.log(convertToRoman(51));
