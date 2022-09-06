@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/Telephone-Number-Validator-USA.js"
+            "program": "${workspaceFolder}/Cash-register-change-calculator.js"
         }
     ]
 }
