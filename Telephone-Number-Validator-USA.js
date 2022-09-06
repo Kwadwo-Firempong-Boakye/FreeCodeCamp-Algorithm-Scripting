@@ -7,6 +7,15 @@
 // The area code is required. If the country code is provided, you must confirm that the country code is 1.
 // Return true if the string is a valid US phone number; otherwise return false.
 
+////////////////////////------ELEGANT REGEX SOLUTION------////////////////////////
+
+function telephoneCheck2(str) {
+	let regex = /^(1\s*)?((\(\d{3}\))|(\d{3}))[\s\-]?(\d{3})[\s\-]?(\d{4})$/;
+	return regex.test(str);
+}
+
+////////////////////////------FUNCTIONAL PROGRAMMING SOLUTION------////////////////////////
+
 function telephoneCheck(str) {
 	//use regex to create an array of numbers
 	//check number length - if length is 11 - check first number
